@@ -3,16 +3,16 @@ $(document).ready(function(){
     event.preventDefault();
 
    var user_answer = $("input#palindrome_user").val();
-
-
-   function palindrom (str) {
-     var sentence = " " ;
-     for ( var i = str.length - 1; i > 1 ; i--) {
-       sentence += str[i];
-       return sentence;
+   var i;
+   var sentence = " ";
+   function palindrome (str) {
+   for ( i = str.length - 1 ; i>= 0 ; i--) {
+    sentence += str[i];
    }
+   return sentence;
  }
-   $("#finalResult").text(palindrom(user_answer));
+
+   $("#finalResult").text(palindrome(user_answer));
    $("#hidden").show();
  });
  });
